@@ -136,6 +136,26 @@ def human2bytes(s):
         prefix[s] = 1 << (i+1)*10
     return int(num * prefix[letter])
 
+
+def BYTES(s):
+    return s
+
+def KB(s):
+    return BYTES(s)*1024
+
+def MB(s):
+    return KB(s)*1024
+
+def GB(s):
+    return MB(s)*1024
+
+def TB(s):
+    return GB(s)*1024
+
+def PB(s):
+    return TB(s)*1024
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
